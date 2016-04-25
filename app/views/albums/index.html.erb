@@ -1,0 +1,9 @@
+<p><%= link_to "Add New Album", "/albums/new" %></p>
+
+<h1> Here's a big list of albums: </h1>
+
+<ul>
+<% @albums.each do |album| %>
+  <li><%= album.artist %>: <%= link_to album.title, album_path(album.id)%></li>
+<%end%>
+</ul>
