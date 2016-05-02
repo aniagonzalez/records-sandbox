@@ -4,8 +4,17 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+combat_rock:
+  title: Combat Rock
+  artist: the_clash
+  released: 1982
+  label: Epic
+  label_code: FE 37689
+  format: LP, Album
+house_that_dirt_built:
+  title: The House That Dirt Built
+  artist: the_heavy
+  released: 2009
+  label: Counter Records
+  label_code: COUNT028
+  format: LP, Album

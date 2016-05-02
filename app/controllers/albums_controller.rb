@@ -1,6 +1,6 @@
 class AlbumsController < ApplicationController
   def index
-    @albums = Album.order(artist: :asc)
+    @albums = Album.all.order(artist: :asc)
   end
 
   def show
@@ -28,6 +28,6 @@ class AlbumsController < ApplicationController
   private
 
   def album_create_params  #tell rails which params are ok to be in the model
-    params.permit(album: [:artist, :title])
+    params.permit(album: [:artist, :title, :label_code])
   end
 end
