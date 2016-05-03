@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   # get "/rosa" => "home#rosa" # put rosa before /:name so it matches it before
   # get "/:name" => "home#index"
   root 'albums#index'
+
+  resources :users, :only => [:new, :create]
+  
   get '/albums' => 'albums#index', as: 'albums'  #Naming the route as 'albums'
 
   # get '/:artist' => 'albums#by_artist'
@@ -28,7 +31,7 @@ Rails.application.routes.draw do
   # get '/albums/by_year/:year'
 
   ########################
-  
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
